@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.IntroductionFragment">
+
+    <!-- left design -->
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:src="@drawable/texture_left"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintBottom_toBottomOf="@id/guidelineLeftTexture"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="1:3"
+        />
+
+
+    <!-- inside circle -->
+    <ImageView
+        android:id="@+id/ellipse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ellips"
+
+        app:layout_constraintStart_toStartOf="@id/guidLineEllipseLeft"
+        app:layout_constraintEnd_toEndOf="@id/guidLineEllipseRight"
+        app:layout_constraintTop_toTopOf="@id/guidLineEllipseTop"
+        app:layout_constraintBottom_toBottomOf="@id/guidLineEllipseBottom"
+
+        app:layout_constraintDimensionRatio="1:1"
+        />
+
+    <!-- middle text -->
+    <TextView
+        android:id="@+id/txt_middleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/h3"
+
+
+        app:layout_constraintTop_toTopOf="@id/guidLineEllipseLeft"
+        app:layout_constraintEnd_toEndOf="@id/ellipse"
+        app:layout_constraintStart_toStartOf="@+id/ellipse"
+        app:layout_constraintBottom_toBottomOf="@id/ellipse"
+
+        android:text="@string/rightAddress"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        />
+
+    <!-- lower middle text -->
+    <TextView
+        android:id="@+id/txt_lower_middleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/h2"
+
+        app:layout_constraintStart_toStartOf="@id/txt_middleText"
+        app:layout_constraintEnd_toEndOf="@id/txt_middleText"
+        app:layout_constraintTop_toBottomOf="@id/txt_middleText"
+
+        android:text="@string/quility"
+        android:gravity="center"
+        android:textSize="20sp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/texture_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineLeftTexture" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_start"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_40sdp"
+        style="@style/StartblueButtonStyle"
+
+        app:layout_constraintStart_toStartOf="@id/txt_lower_middleText"
+        app:layout_constraintEnd_toEndOf="@+id/txt_lower_middleText"
+        app:layout_constraintTop_toBottomOf="@+id/txt_lower_middleText"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:text="Start"
+        />
+
+
+
+
+
+    <!-- all the screen guidelines-->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeftTexture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".33"
+        />
+
+
+    <!-- below for the mid circle-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineEllipseLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineEllipseRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineEllipseTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.19"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidLineEllipseBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.52"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
