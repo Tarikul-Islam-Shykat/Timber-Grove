@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "165376862278",
+    "project_id": "timbertrove-8f391",
+    "storage_bucket": "timbertrove-8f391.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165376862278:android:c803e3af4de5c78ec0c247",
+        "android_client_info": {
+          "package_name": "com.example.timbertrove"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAn4E0yV1IlOLWOOPSpGAKoKY2BwhrPjn8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
