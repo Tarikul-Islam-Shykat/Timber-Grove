@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragments.RegisterFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"
+        />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/h3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:drawableStart="@drawable/ic_kleine_shape"
+            android:text="Timber Grove"
+            android:textStyle="bold"
+
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisteright"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Lets register -->
+        <TextView
+            android:id="@+id/txt_letsRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h3"
+            android:text="@string/registerText"
+            android:textSize="@dimen/_23sdp"
+
+            android:textStyle="bold"
+
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/tvAppName"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisteright"
+
+            />
+
+        <!--  Dont have an account -->
+        <TextView
+            android:id="@+id/txt_alreadHaveAnAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/h2"
+            android:textSize="20sp"
+            android:text="@string/registerExtraText"
+
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@id/txt_letsRegister"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisteright"
+            />
+
+        <!--name edit text -->
+        <EditText
+            android:id="@+id/edFirstNameReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            style="@style/editText"
+            android:hint="First name"
+            android:layout_marginTop="@dimen/_15sdp"
+
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@+id/txt_alreadHaveAnAccount"
+            />
+
+        <!--last name edit text -->
+        <EditText
+            android:id="@+id/edLastNameReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            style="@style/editText"
+            android:hint="Last Name"
+            android:layout_marginTop="@dimen/_8sdp"
+
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@+id/edFirstNameReg"
+            />
+
+        <!--email edit text -->
+        <EditText
+            android:id="@+id/edEmailReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            style="@style/editText"
+            android:hint="Email"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:inputType="textEmailAddress"
+
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@+id/edLastNameReg"
+            />
+
+        <!--email edit text -->
+        <EditText
+            android:id="@+id/edPasswordReg"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_50sdp"
+            style="@style/editText"
+            android:hint="Password"
+            android:layout_marginTop="@dimen/_8sdp"
+
+            app:layout_constraintStart_toStartOf="@+id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@+id/edEmailReg"
+            />
+
+        <!--register btn -->
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/btn_registerPageRegister"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_40sdp"
+            style="@style/StartblueButtonStyle"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="Register"
+            app:spinning_bar_color="@color/white"
+
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@+id/edPasswordReg"
+            />
+
+
+        <!-- face book login button design-->
+        <ImageView
+            android:id="@+id/btn_facebookRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/facebook_login"
+
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintStart_toStartOf="@id/guidelineRegisterLeft"
+            app:layout_constraintTop_toBottomOf="@id/btn_registerPageRegister"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Facebook"
+            android:textColor="@color/black"
+
+            app:layout_constraintStart_toStartOf="@id/btn_facebookRegister"
+            app:layout_constraintEnd_toEndOf="@id/btn_facebookRegister"
+            app:layout_constraintTop_toTopOf="@id/btn_facebookRegister"
+            app:layout_constraintBottom_toBottomOf="@id/btn_facebookRegister"
+            />
+
+        <!-- face book register button design-->
+        <ImageView
+            android:id="@+id/btn_googleRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/google_login"
+
+            android:layout_marginTop="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="@id/guidelineRegisteright"
+            app:layout_constraintTop_toBottomOf="@id/btn_registerPageRegister"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Google"
+            android:textColor="@color/black"
+
+            app:layout_constraintStart_toStartOf="@id/btn_googleRegister"
+            app:layout_constraintEnd_toEndOf="@id/btn_googleRegister"
+            app:layout_constraintTop_toTopOf="@id/btn_googleRegister"
+            app:layout_constraintBottom_toBottomOf="@id/btn_googleRegister"
+            />
+
+
+
+
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisterLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.09"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineRegisteright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.91"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</FrameLayout>
