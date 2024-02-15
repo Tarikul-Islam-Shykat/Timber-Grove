@@ -1,5 +1,6 @@
 # Timber-Grove
-Beautiful and modern furniture android Application with admin app.
+### Due to some issues in android studio, i manullay uploaded the code. But i am building it again with more feautres. Soon it will be published.
+## Beautiful and modern furniture android Application with admin app.
 ![Timber Grove](https://github.com/Tarikul-Islam-Shykat/Timber-Grove/assets/77191261/817cb46b-b009-45f7-950a-3c689ac42f4a)
 ![Timber Grove 2](https://github.com/Tarikul-Islam-Shykat/Timber-Grove/assets/77191261/04bb28ac-b383-4a9a-aedd-f4ca0924f3a7)
 ![Timber Grove 3](https://github.com/Tarikul-Islam-Shykat/Timber-Grove/assets/77191261/ae0dd853-51b9-4c9c-b994-a29cf1872293)
